@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
+    'dashboard.apps.DashboardConfig',
     # 'accounts.apps.AccountsConfig',
 ]
 

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    【home】
+    {% if user.is_authenticated %}
+        <p>ログインユーザー: {{ user.username }}</p>
+    {% else %}
+        <p>ログインしていません。</p>
+    {% endif %}
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-10">
+    
+    <table class="table table-bordered table-striped-columns table-sm">
+    <thead>
+      <tr>
+        <th scope="col">機能.</th>
+        <th scope="col">リンク</th>
+        <th scope="col">URL</th>
+        <th scope="col">備考</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>登録-Registration</td>
+            <td><a href="http://127.0.0.1:8000/dj-rest-auth/registration/">Registration</a></td>
+            <td>ttp://127.0.0.1:8000/dj-rest-auth/registration/</td>
+            <td>　</td>
+        </tr>
+            <tr>
+            <td>ログイン</td>
+            <td><a href="http://127.0.0.1:8000/dj-rest-auth/login/">login</a></td>
+            <td>hhttp://127.0.0.1:8000/dj-rest-auth/login/</td>
+            <td>　</td>
+        </tr>
+        <tr>
+            <td>ログアウト</td>
+            <td><a href="http://127.0.0.1:8000/dj-rest-auth/logout/">logout</a></td>
+            <td>http://127.0.0.1:8000/dj-rest-auth/logout/</td>
+            <td>　</td>
+        </tr>
+        <tr>
+            <td>todo_taskアプリ</td>
+            <td><a href="http://127.0.0.1:8000/todo_task/tasks/">todo_task</a></td>
+            <td>http://127.0.0.1:8000/todo_task/tasks/</td>
+            <td>　</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
