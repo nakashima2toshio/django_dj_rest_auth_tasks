@@ -12,5 +12,6 @@ urlpatterns = [
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
     path('/dj-rest-auth/registration/account-confirm-email/', include('allauth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('api/', include('todo_task.urls')),
     # path('dj-rest-auth/registration/account-confirm-email/<str:key>/', ConfirmEmailView.as_view(), name='account_confirm_email'),  # カスタムビューを使用
 ]
