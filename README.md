@@ -1,4 +1,6 @@
 ### django_dj_rest_auth_tasks
+- django + dj_rest_auth + JWT を使う上でのポイントは、カスタムユーザを作ることです。
+- （これに尽きるかなあ）
 ##### 機能
 - 認証　JWT(Json Web Token) Token認証
 - アプリ（例）Todo_tasksアプリ　API利用（作成中）

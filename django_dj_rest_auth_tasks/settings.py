@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.twitter',
-    'dashboard.apps.DashboardConfig',
-    # 'accounts.apps.AccountsConfig',
+    'users',
     'todo_task.apps.TodoTaskConfig',
 ]
 
@@ -147,6 +146,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 重要!!!
+# https://docs.djangoproject.com/ja/3.0/topics/auth/customizing/#substituting-a-custom-user-model
+AUTH_USER_MODEL = 'users.User'
+
 # see https://dj-rest-auth.readthedocs.io/en/latest/configuration.html
 REST_AUTH = {
     'LOGIN_SERIALIZER': 'dj_rest_auth.serializers.LoginSerializer',
