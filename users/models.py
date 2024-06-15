@@ -37,6 +37,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     uuid = models.UUIDField(default=uuid.uuid4, primary_key=True, editable=False)
+    # id = models.BigAutoField(primary_key=True)  # Serializerで対応
     username_validator = UnicodeUsernameValidator()
 
     username = models.CharField(
