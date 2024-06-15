@@ -3,7 +3,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
-
+from users.views import CustomTokenObtainPairView
 # from accounts.views import CustomConfirmEmailView  # カスタムビューをインポート
 
 urlpatterns = [
@@ -13,5 +13,6 @@ urlpatterns = [
     path('/dj-rest-auth/registration/account-confirm-email/', include('allauth.urls')),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('api/', include('todo_task.urls')),
+    path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('dj-rest-auth/registration/account-confirm-email/<str:key>/', ConfirmEmailView.as_view(), name='account_confirm_email'),  # カスタムビューを使用
 ]
